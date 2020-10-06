@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.SQLException;
 
 @RestController
-@RequestMapping(value="/users")
+//RequestMapping(value="/users")
 public class UserController {
 
     UserDao userdao;
@@ -18,7 +18,7 @@ public class UserController {
 
     }
 
-    @GetMapping(value = "/getall")
+    @RequestMapping(value = "/getall")
     public String getall() throws SQLException {
 
         return userdao.getUsers().toString();
